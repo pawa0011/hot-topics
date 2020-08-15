@@ -136,19 +136,32 @@ Open Sans/sans-serif
         padding: 2rem;
     }
 
-    .information .info-section content figure{
-        margin: 0;
-    }
-
-    .info-section content{
-        display: flex;
-        flex-wrap: wrap;
+    .content{
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        border-bottom: 1px solid #ccc;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0.2rem;
+        grid-template-areas: 
+        "left" 
+        "right";  
     }
     
-    .info-section content figure{
+    .imge{
+        grid-area: left;
+        padding: 0 1rem;
         margin: 0;
-        flex-basis: 100%;
-        padding: 1rem;
+    }
+    
+    .text{
+        grid-area: right;
+        padding: 0 1rem;
+    }
+
+    .info-section h1{
+        padding: 2rem;
     }
 
 /*------button styles------*/
