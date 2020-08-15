@@ -498,7 +498,7 @@ Open Sans/sans-serif
     }
     
     .information .info-section h1{
-		padding-left: 4.5rem;
+		padding-left: 2rem;
         padding-top: 2rem;
         color: #263754;
 	}
@@ -509,7 +509,7 @@ Open Sans/sans-serif
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
-        grid-gap: 1rem;
+        grid-gap: 0.5rem;
         grid-template-areas: 
         "left right";  
     }
