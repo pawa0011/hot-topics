@@ -1,5 +1,5 @@
 /*
-Assignment: Content Manipulation Assignment
+Assignment: Loaded Content by Ajax Assignment
 Author: Geetanjali Pawase
 */
 
@@ -52,28 +52,23 @@ Open Sans/sans-serif
 
 /*------navbar styles------*/
 
-        nav {
+    .navigation {
         background-color: #263754;
         padding: 1% 0;
     }
 
-    ul {
+    .navigation ul {
         list-style-type: none;
         text-align: left;
+         padding:0.5% 2%;
     }
 
-    ul li {
-        display: inline;
-        padding-left: 2rem;
-        margin-bottom: 2%;
+    .navigation ul li:nth-child(1) {    
+        text-align: center;
     }
 
-    ul li a {
+    .navigation .logo {    
         color: #FFFFFF;
-        text-decoration: none;
-        border: 1px solid #FFFFFF;
-        border-radius: 2px;
-        padding: 2% 12%;
     }
 
     a:link,
@@ -82,32 +77,9 @@ Open Sans/sans-serif
         color: #FFFFFF;
     }
 
-    .menu {
-        max-width: 90%;
-        margin: 3% auto;
-        padding: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 1rem;
-        grid-template-areas: 
-        "logo"
-        "home"
-        "about";
-    }
+    .menu{    
+        padding: 0 2rem;
 
-    .logo {
-        grid-area: logo;
-        color: #FFFFFF;
-        padding-left: 4rem;
-    }
-
-    .home {
-        grid-area: home;
-    }
-
-    .about {
-        grid-area: about;
     }
 
 /*------masthead styles------*/
@@ -119,50 +91,73 @@ Open Sans/sans-serif
         width: 100%;
         padding-top: 5%;
         padding-bottom: 5%;
+        padding-left: 5%;
     }
-
-    .masthead h1{
-        text-align: center;
-        color: #FFFFFF;
-    }
-
 
 /*------main-content styles------*/
 
-    .main-content {
+    .main-content{
+        display: flex;
+        flex-direction: column;	
+        padding:0 0; 
+
+    }
+
+    .information{	
+        display: flex;
+        flex-direction: column;
+        float: left;
+        padding: 2rem 2rem;    
+    }
+
+    .information.info-section{	
+        display: flex;
+        flex-direction: row;	
+    }
+
+    .info-section figure{	
+        float: left;	
+    }
+
+    .info-section figcaption{
+        text-align: center;
+    }
+
+    .info-section img{
+        text-align: center;
         max-width: 100%;
-        background-color: #FFFFFF;
-        margin: 0 auto;
-        padding: 2rem;
+        width: 380px;
+        height: 300px;
+        object-fit: cover;	
+    }
+
+/*------portfolio styles------*/
+
+    .image-row{
+        display:grid;
+    }
+
+    .image-layout{	
+        margin-bottom: 5%;
     }
 
     .content{
-        width: 100%;
-        margin: 0 auto;
-        display: grid;
-        border-bottom: 1px solid #ccc;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 0.2rem;
-        grid-template-areas: 
-        "left" 
-        "right";  
-    }
-    
-    .imge{
-        grid-area: left;
-        padding: 0 1rem;
-        margin: 0;
-    }
-    
-    .text{
-        grid-area: right;
-        padding: 0 1rem;
+        text-align: center;
+        display: grid;	
+        margin-top:1rem;	
     }
 
-    .info-section h1{
-        padding: 2rem;
+    .image-box{
+        width: 100%;
     }
+
+    .image-box img{		
+        max-width: 100%;
+        width: 350px;
+        height: 350px;
+        object-fit: cover;		
+    }
+
 
 /*------button styles------*/
 
@@ -177,7 +172,7 @@ Open Sans/sans-serif
     }
 
     #active-button {
-	    background-color: #263754
+	    background-color: #263754;
     }
 
 /*------footer styles------*/  
@@ -246,27 +241,19 @@ Open Sans/sans-serif
     
 /*------navbar styles------*/
     
-    nav {
+    .navigation {
         background-color: #263754;
         padding: 1% 0;
     }
     
-    ul {
-        list-style-type: none;
-        text-align: center;
-    }
-
-    ul li {
+    .navigation ul li {    
         display: inline;
-    }
-
-    ul li a {
-        color: #FFFFFF;
-        text-decoration: none;
-        border: 1px solid #FFFFFF;
-        border-radius: 2px;
-        padding: 2% 12%;
-    }
+        padding: 0 1.5rem;    
+    }  
+    
+    .menu{    
+        padding: 0 2rem;
+    } 
 
     a:link,
     a:visited,
@@ -279,32 +266,6 @@ Open Sans/sans-serif
         background-color: #FFFFFF;
     }
 
-    .menu {
-        max-width: 60rem;
-        margin: 0 auto;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 1rem;
-        grid-template-areas: 
-        "logo logo"
-        "home about";
-    }
-
-    .logo {
-        grid-area: logo;
-    }
-
-    .home {
-        grid-area: home;
-    }
-
-    .about {
-        grid-area: about;
-    }
-
-    
 /*------masthead styles------*/
 
     .masthead {
@@ -326,38 +287,27 @@ Open Sans/sans-serif
 
     
     .main-content{
-        max-width: 90%;
-        background-color: #FFFFFF;
-        margin: 0 auto;
-        padding: 3%;
-    }
-    
-    .information .info-section h1{
-		padding-left: 4.5rem;
-        padding-top: 2rem;
-        color: #263754;
+		display: flex;
+    	flex-direction: column;	
+    	padding: 0 1.2rem; 
+		margin-bottom: 10%;
 	}
-
-    .content{
-        width: 100%;
-        margin: 0 auto;
-        display: grid;
+    
+    .information{
+        display: flex;
+        flex-direction: column;
+        padding: 1% 15%;
         border-bottom: 1px solid #ccc;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1rem;
-        grid-template-areas: 
-        "left right";  
     }
+	
+   .image-row{
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1.5rem;
+	}
     
-    .imge{
-        grid-area: left;
-    }
-    
-    .text{
-        grid-area: right;
-    }
-    
+	.image-layout{	
+		margin-bottom: 2%;
+	}
     
     /*------footer styles------*/
     
@@ -425,61 +375,8 @@ Open Sans/sans-serif
     
 /*------navbar styles------*/
     
-    nav {
-        background-color: #263754;
-        padding: 1% 0;
-    }
-    
-    ul {
-        list-style-type: none;
-        text-align: center;
-    }
-
-    ul li {
-        display: inline;
-    }
-
-    ul li a {
-        color: #FFFFFF;
-        text-decoration: none;
-        border: 1px solid #FFFFFF;
-        border-radius: 2px;
-        padding: 2% 12%;
-    }
-
-    a:link,
-    a:visited,
-    a:active {
-        color: #FFFFFF;
-    }
-
-    a:hover {
-        color: #263754;
-        background-color: #FFFFFF;
-    }
-
     .menu {
-        max-width: 60rem;
-        margin: 0 auto;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        grid-gap: 5rem;
-        grid-template-areas: 
-        "logo home about";
-    }
-
-    .logo {
-        grid-area: logo;
-    }
-
-    .home {
-        grid-area: home;
-    }
-
-    .about {
-        grid-area: about;
+        text-align: center;
     }
 
     
@@ -503,36 +400,16 @@ Open Sans/sans-serif
     
 /*------main-content styles------*/
 
+    .image-row{
+        grid-template-columns: repeat(3, 1fr);
+		column-gap: 10px;
+    }
+    
     .main-content{
-        max-width: 90%;
-        background-color: #FFFFFF;
-        margin: 0 auto;
-        padding: 3%;
-    }
-    
-    .information .info-section h1{
-		padding-left: 2rem;
-        padding-top: 2rem;
-        color: #263754;
-	}
-
-    .content{
-        width: 100%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr;
-        grid-gap: 0.5rem;
-        grid-template-areas: 
-        "left right";  
-    }
-    
-    .imge{
-        grid-area: left;
-    }
-    
-    .text{
-        grid-area: right;
+        display: flex;
+    	flex-direction: column;	
+    	padding: 0 8%; 
+		margin-bottom: 8%;
     }
     
     .button{
@@ -545,7 +422,7 @@ Open Sans/sans-serif
     }
     
     #active-button{
-	    background-color: #263754
+	    background-color: #263754;
     }
 
 /*------footer styles------*/
