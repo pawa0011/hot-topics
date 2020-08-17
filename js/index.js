@@ -1,6 +1,6 @@
-const container = document.querySelector('.information');
+const container = document.querySelector('.main-content');
 
-const links = document.querySelectorAll('header a');
+const links = document.querySelectorAll('.navigation a');
 
 let url = 'partials/home.html';
 
